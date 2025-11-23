@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #2d6b4b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideDown 1s ease;
+}
+
+
+.logo img {
+  height: 60px;
+}
+
+.logo-icon {
+  width: 145px;
+  height: 55px;
+}
+
+.btn-header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* Main Info */
+.info {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  animation: fadeIn 1s ease;
+}
+
+.text-info h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.text-info h3 {
+  margin-top: 1.5rem;
+  color: #444;
+}
+
+.text-info p,
+.text-info ul {
+  margin-top: 0.5rem;
+}
+
+.text-info ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+/* Divisor */
+.divisor-clean {
+  margin: 3rem 0;
+  border-top: 1px solid #ddd;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #eee;
+  padding: 2rem 1rem;
+  animation: fadeIn 1.2s ease;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  color: #4CAF50;
+  margin-bottom: 0.5rem;
+}
+
+.footer-desc,
+.footer-col p {
+  margin: 0.3rem 0;
+}
+
+.footer-line {
+  text-align: center;
+  margin-top: 1.5rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ /* Botão "INÍCIO" no topo direito */
+.btn-header-top {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+}
+
+/* Segundo botão (abaixo dos integrantes) */
+.btn-bottom {
+  margin-top: 1.5rem;
+}

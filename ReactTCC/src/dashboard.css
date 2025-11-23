@@ -1,0 +1,197 @@
+/* Conteúdo do dashboard.css */
+.dashboard-denunciante {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8faf8;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HEADER */
+.dash-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinhamento corrigido para a esquerda */
+  gap: 12px;
+  padding: 1rem 2rem; /* Padding ajustado */
+  background-color: #2d6b4b;
+  border-bottom: 2px solid #c7e2cf;
+}
+
+.dash-logo {
+  font-size: 1.8rem; /* Tamanho ajustado */
+  font-weight: 700;
+  color: #ffffff; /* Cor ajustada para branco */
+}
+
+/* CONTAINER */
+.dash-container {
+  display: flex;
+  flex: 1;
+}
+
+/* SIDEBAR */
+.dash-sidebar {
+  width: 240px;
+  background-color: #ffffff;
+  border-right: 2px solid #dbe7df;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.dash-sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dash-sidebar nav ul li {
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #333; /* Cor do texto padrão */
+  font-weight: 500;
+}
+
+.dash-sidebar nav ul li:hover {
+  background-color: #e8f5ee;
+  color: #2f855a;
+}
+
+/* USUÁRIO */
+.dash-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 10px;
+}
+
+.user-avatar,
+.user-avatar-fallback {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #c7e2cf;
+  color: #2f855a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  font-weight: 600;
+  margin: 0;
+}
+
+.user-email {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 2px 0;
+}
+
+.logout-btn {
+  background-color: #2f855a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #276749;
+}
+
+/* CONTEÚDO CENTRALIZADO */
+.dash-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centraliza horizontalmente */
+  text-align: center;
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+  background-color: #f8faf8; /* Fundo levemente esverdeado/claro */
+}
+
+.dash-content h2 {
+  color: #276749;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.dash-content p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* CARDS CENTRALIZADOS */
+.dash-cards {
+  display: flex;
+  justify-content: center; /* Centraliza os cards no eixo X */
+  align-items: flex-start; /* Alinha os cards ao topo */
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  width: 100%; /* Ocupa a largura total do dash-content */
+  max-width: 900px; /* Limita a largura para não esticar demais */
+}
+
+.dash-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  background-color: #ffffff;
+  border: 1px solid #dbe7df;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.dash-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dash-card h3 {
+  color: #2f855a;
+  margin-bottom: 0.5rem;
+}
+
+.dash-card p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.dash-card button {
+  background-color: #2f855a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.dash-card button:hover {
+  background-color: #276749;
+}

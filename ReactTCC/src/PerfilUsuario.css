@@ -1,0 +1,113 @@
+.perfil-usuario-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-usuario-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.profile-display p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.profile-display strong {
+  color: #555;
+}
+
+.profile-display button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 15px;
+}
+
+.profile-display button:hover {
+  background-color: #218838;
+}
+
+.profile-edit-form .form-group {
+  margin-bottom: 15px;
+}
+
+.profile-edit-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.profile-edit-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.profile-edit-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.profile-edit-form button[type="button"] {
+  background-color: #6c757d;
+}
+
+.profile-edit-form button:hover {
+  opacity: 0.9;
+}
+
+.form-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.profile-avatar {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-avatar-lg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.user-avatar-fallback-lg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #a8e6cf; /* Cor de fundo suave */
+  color: #333; /* Cor do texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0 auto;
+  border: 2px solid #ddd;
+}
+

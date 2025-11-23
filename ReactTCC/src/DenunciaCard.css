@@ -1,0 +1,41 @@
+.denuncia-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.denuncia-card h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.denuncia-card p {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.denuncia-card strong {
+  color: #555;
+}
+
+.status-pendente {
+  color: #ffc107; /* Amarelo */
+  font-weight: bold;
+}
+
+.status-em-analise {
+  color: #007bff; /* Azul */
+  font-weight: bold;
+}
+
+.status-concluida {
+  color: #28a745; /* Verde */
+  font-weight: bold;
+}
+
+/* Adicione mais estilos de status conforme necessário */
+

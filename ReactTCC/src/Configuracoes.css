@@ -1,0 +1,29 @@
+.configuracoes-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.configuracoes-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.configuracoes-container p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.configuracoes-container ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.configuracoes-container li {
+  margin-bottom: 5px;
+}
+

@@ -1,0 +1,175 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  height: 100%;
+}
+
+.entrar-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #797979, #2e2e2e);
+  align-items: center;
+}
+
+/* Header */
+header {
+  background-color: #2d6b4b;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 145px;
+  height: auto;
+}
+
+/* Main centralizado */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Form container */
+.form-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.form-container h2 {
+  margin-bottom: 24px;
+  color: #e7d18d;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-align: left;
+  margin: 10px 0 4px;
+  font-weight: 600;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  transition: border-color 0.3s;
+  color: black;
+   background-color: #fff;
+}
+
+input:focus {
+  outline: none;
+  border-color: #000000;
+}
+
+/* Botão Entrar */
+button[type="submit"] {
+  background-color: #36875D;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #409c6c;
+  transform: scale(1.05);
+}
+
+/* Google login */
+.google-login {
+  margin-top: 8px;
+}
+
+.google-login p {
+  margin: 12px 0;
+  color: #777;
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #fff;
+  color: #555;
+  border: 1px solid #ccc;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.google-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.google-button:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: scale(1.05);
+}
+
+/* Link cadastro */
+.form-container p {
+  margin-top: 20px;
+}
+
+.form-container a {
+  color: #e7d18d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .logo-icon {
+    height: 50px;
+  }
+}

@@ -1,0 +1,93 @@
+/* Estilos para o container principal */
+.minhas-denuncias-container {
+  padding: 20px;
+}
+
+/* Estilos para a lista de cards */
+.denuncias-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Layout responsivo */
+}
+
+/* Estilos para o card individual */
+.denuncia-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.denuncia-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 5px;
+}
+
+.card-id {
+  font-weight: bold;
+  color: #555;
+}
+
+.card-status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: white;
+}
+
+/* Cores para os status */
+.status-pending {
+  background-color: #ffc107; /* Amarelo */
+}
+.status-progress {
+  background-color: #007bff; /* Azul */
+}
+.status-resolved {
+  background-color: #28a745; /* Verde */
+}
+
+.card-body h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.card-description {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85em;
+  color: #888;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 10px;
+}
+
+.card-info {
+  margin-bottom: 3px;
+}
+
+/* Estilos para o estado vazio */
+.empty-state {
+  text-align: center;
+  padding: 50px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  color: #888;
+}
