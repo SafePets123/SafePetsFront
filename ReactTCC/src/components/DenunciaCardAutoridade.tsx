@@ -1,15 +1,16 @@
 import React from 'react';
-import '../DenunciaCardAutoridade.css';
-
+import '../DenunciaCardAutoridade.css'; 
 
 interface DenunciaCardProps {
   denuncia: {
     _id: string;
-    titulo: string;
+    titulo: string; 
     descricao: string;
     status: string;
     dataCriacao: string;
-    local: string;
+    local: string; 
+    email: string;
+    telefone: string;
   };
 }
 
@@ -42,6 +43,16 @@ const DenunciaCardAutoridade: React.FC<DenunciaCardProps> = ({ denuncia }) => {
         <p className="card-label">Localização:</p>
         <p className="card-local">{denuncia.local || 'Local não informado'}</p>
       </div>
+      
+      <div className="card-info-group">
+        <p className="card-label">Email Denunciante:</p>
+        <p className="card-email">{denuncia.email || 'Não informado'}</p>
+      </div>
+
+      <div className="card-info-group">
+        <p className="card-label">Telefone Denunciante:</p>
+        <p className="card-telefone">{denuncia.telefone || 'Não informado'}</p>
+      </div>
 
       <div className="card-info-group full-width">
         <p className="card-label">Descrição Detalhada:</p>
@@ -52,7 +63,6 @@ const DenunciaCardAutoridade: React.FC<DenunciaCardProps> = ({ denuncia }) => {
         Registrada em: {formatarData(denuncia.dataCriacao)}
       </p>
       
-      <button className="card-action-btn">Analisar Caso</button>
     </div>
   );
 };

@@ -57,13 +57,6 @@ const DashboardAutoridade: React.FC = () => {
                 </button>
               </div>
 
-              <div className="dash-card">
-                <h3>🔍 Analisar Casos</h3>
-                <p>Investigue e registre atualizações de cada ocorrência.</p>
-                <button onClick={() => setPaginaAtual("analisar-casos")}>
-                  Analisar
-                </button>
-              </div>
 
               <div className="dash-card">
                 <h3>📨 Comunicar ONG</h3>
@@ -76,7 +69,9 @@ const DashboardAutoridade: React.FC = () => {
           </>
         );
       case "denuncias-recebidas":
-        return <DenunciasRecebidas />;
+        return <DenunciasRecebidas />; 
+      case "comunicar-ong":
+        return <h2>📨 Enviar informações para ONGs parceiras.</h2>;
       case "ajuda":
         return (
           <>
@@ -109,6 +104,7 @@ const DashboardAutoridade: React.FC = () => {
             <ul>
               <li onClick={() => setPaginaAtual("inicio")}>🏠 Início</li>
               <li onClick={() => setPaginaAtual("denuncias-recebidas")}>📋 Denúncias Recebidas</li>
+              <li onClick={() => setPaginaAtual("comunicar-ong")}>📨 Comunicar ONG</li>
               <li onClick={() => setPaginaAtual("ajuda")}>📞 Ajuda</li>
             </ul>
           </nav>

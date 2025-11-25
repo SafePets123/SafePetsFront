@@ -1,3 +1,5 @@
+// Arquivo: DenunciasRecebidas.tsx
+
 import React, { useEffect, useState } from "react";
 import DenunciaCardAutoridade from "../components/DenunciaCardAutoridade"; 
 
@@ -8,7 +10,9 @@ interface DenunciaParaCard {
   descricao: string;
   status: string;
   dataCriacao: string;
-  local: string;
+  local: string; 
+  email: string; // Adicionado
+  telefone: string; // Adicionado
 }
 
 interface DenunciaBackend {
@@ -17,7 +21,9 @@ interface DenunciaBackend {
   denun_descricao: string;
   denun_status: string;
   denun_tipo_animal: string;
-  denun_local: string;
+  denun_local: string; 
+  denun_email: string; // Assumindo que o backend retorna o email
+  denun_telefone: string; // Assumindo que o backend retorna o telefone
 }
 
 const DenunciasRecebidas: React.FC = () => {
@@ -35,7 +41,6 @@ const DenunciasRecebidas: React.FC = () => {
           return;
         }
         
-        // URL para buscar denuncias
         const API_URL = "https://safepetsback.onrender.com/denuncias/todas";
         
         const response = await fetch(API_URL, {
@@ -52,13 +57,16 @@ const DenunciasRecebidas: React.FC = () => {
 
         const data: DenunciaBackend[] = await response.json();
         
+        // Mapeamento de Backend para o formato do Card
         const mappedDenuncias: DenunciaParaCard[] = data.map((d) => ({
             _id: d.denun_cod.toString(), 
             titulo: `Denúncia #${d.denun_cod} - ${d.denun_tipo_animal}`, 
             descricao: d.denun_descricao,
             status: d.denun_status || 'Em Análise',
             dataCriacao: d.denun_data, 
-            local: d.denun_local,
+            local: d.denun_local, 
+            email: d.denun_email, // Mapeando o email
+            telefone: d.denun_telefone, // Mapeando o telefone
         }));
 
         setDenuncias(mappedDenuncias);
@@ -91,7 +99,10 @@ const DenunciasRecebidas: React.FC = () => {
       ) : (
         <div className="denuncias-list">
           {denuncias.map((denuncia) => (
-            <DenunciaCardAutoridade key={denuncia._id} denuncia={denuncia} />
+            <DenunciaCardAutoridade 
+              key={denuncia._id} 
+              denuncia={denuncia} 
+            />
           ))}
         </div>
       )}
