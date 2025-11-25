@@ -98,7 +98,7 @@ const Denuncie: React.FC<DenuncieProps> = ({ embed = false }) => {
     // ----------------------------------------------------------------
 
     try {
-      const response = await axios.post("http://localhost:3344/denuncias", payload, {
+      const response = await axios.post("https://safepetsback.onrender.com/denuncias", payload, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

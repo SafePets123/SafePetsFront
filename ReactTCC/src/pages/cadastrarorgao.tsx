@@ -56,7 +56,7 @@ const CadastrarOrgao: React.FC = () => {
 
     try {
       // VERIFIQUE A PORTA CORRETA DO SEU BACKEND (EX: 3333 OU 3000)
-      const response = await fetch("http://localhost:3344/orgao/cadastro", {
+      const response = await fetch("https://safepetsback.onrender.com/orgao/cadastro", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

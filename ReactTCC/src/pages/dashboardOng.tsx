@@ -16,7 +16,7 @@ const DashboardOng: React.FC = () => {
     const storedEmail = localStorage.getItem("userEmail");
 
     if (storedName && storedEmail) {
-      fetch(`http://localhost:3344/ong/${storedEmail}`)
+      fetch(`https://safepetsback.onrender.com/ong/${storedEmail}`)
         .then((res) => res.json())
         .then((data) => {
           setUsuario({
@@ -80,10 +80,6 @@ const DashboardOng: React.FC = () => {
       case "gerenciar-abrigos":
         return <h2>🏡 Lista e edição de abrigos cadastrados.</h2>;
       case "solicitacoes":
-        return <h2>🚨 Solicitações de resgate recebidas.</h2>;
-      case "perfil":
-        return <h2>👤 Atualize as informações da ONG aqui.</h2>;
-      case "configuracoes":
         return <h2>⚙️ Configurações da conta da ONG.</h2>;
       case "ajuda":
         return (
@@ -119,8 +115,6 @@ const DashboardOng: React.FC = () => {
               <li onClick={() => setPaginaAtual("cadastrar-animal")}>🐾 Cadastrar Animal</li>
               <li onClick={() => setPaginaAtual("gerenciar-abrigos")}>🏡 Gerenciar Abrigos</li>
               <li onClick={() => setPaginaAtual("solicitacoes")}>🚨 Solicitações</li>
-              <li onClick={() => setPaginaAtual("perfil")}>👤 Perfil</li>
-              <li onClick={() => setPaginaAtual("configuracoes")}>⚙️ Configurações</li>
               <li onClick={() => setPaginaAtual("ajuda")}>📞 Ajuda</li>
             </ul>
           </nav>

@@ -25,15 +25,15 @@ const Ent: React.FC = () => {
 
     switch (formData.userType) {
       case "denunciante":
-        endpoint = "http://localhost:3344/userauth";
+        endpoint = "https://safepetsback.onrender.com/userauth";
         redirectPath = "/DashboardDenunciante";
         break;
       case "ong":
-        endpoint = "http://localhost:3344/ong/login";
+        endpoint = "https://safepetsback.onrender.com/ong/login";
         redirectPath = "/DashboardOng";
         break;
       case "orgao":
-        endpoint = "http://localhost:3344/orgao/login";
+        endpoint = "https://safepetsback.onrender.com/orgao/login";
         redirectPath = "/DashboardAutoridade";
         break;
       default:

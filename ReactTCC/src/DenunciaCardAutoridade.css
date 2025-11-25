@@ -1,0 +1,99 @@
+/* Estilo para o container principal do card */
+.denuncia-card-autoridade {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espaçamento entre os grupos de informação */
+}
+
+/* Título da Denúncia */
+.denuncia-card-autoridade .card-titulo {
+    width: 100%; /* Ocupa toda a largura */
+    color: #1e8449; /* Cor verde do SafePets */
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* Grupo de Informação (Label + Valor) */
+.denuncia-card-autoridade .card-info-group {
+    flex: 1 1 45%; /* Ocupa quase metade da largura, permitindo 2 colunas */
+    min-width: 200px;
+}
+
+.denuncia-card-autoridade .card-info-group.full-width {
+    flex: 1 1 100%; /* Ocupa toda a largura para a descrição */
+}
+
+.denuncia-card-autoridade .card-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+    font-size: 0.9em;
+}
+
+/* Estilo para o Status */
+.denuncia-card-autoridade .card-status {
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+/* Cores para Status (Ajuste conforme seus status reais) */
+.denuncia-card-autoridade .status-em-analise {
+    background-color: #fff3cd; /* Amarelo claro */
+    color: #856404; /* Amarelo escuro */
+}
+
+.denuncia-card-autoridade .status-concluida {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Verde escuro */
+}
+
+.denuncia-card-autoridade .status-arquivada {
+    background-color: #f8d7da; /* Vermelho claro */
+    color: #721c24; /* Vermelho escuro */
+}
+
+/* Descrição e Local */
+.denuncia-card-autoridade .card-descricao,
+.denuncia-card-autoridade .card-local {
+    margin-top: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Data de Criação */
+.denuncia-card-autoridade .card-data-criacao {
+    width: 100%;
+    text-align: right;
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Botão de Ação */
+.denuncia-card-autoridade .card-action-btn {
+    background-color: #1e8449; /* Verde principal */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.denuncia-card-autoridade .card-action-btn:hover {
+    background-color: #155724;
+}
