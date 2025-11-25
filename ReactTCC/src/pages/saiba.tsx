@@ -2,17 +2,16 @@ import React from "react";
 import "../style.css";
 import "../saibamais.css";
 import logo from "/logo.png";
+import { Link } from 'react-router-dom';
 
 const SaibaMais: React.FC = () => {
   return (
     <div>
       <header>
         <div className="logo">
+          <Link to="/">
           <img src={logo} alt="Logo" className="logo-icon" />
-        </div>
-
-        <div className="btn-header-top">
-          <a href="/" className="btn-header">INÍCIO</a>
+          </Link>
         </div>
       </header>
 
@@ -20,8 +19,9 @@ const SaibaMais: React.FC = () => {
         <div className="text-info">
           <h2>Nossa Missão</h2>
           <p>
-            A SafePets tem a missão de ajudar animais de estimação que sofrem
-            maus-tratos, promovendo o bem-estar e a segurança de todos os pets.
+          A SafePets existe para combater maus-tratos e garantir proteção, 
+          acolhimento e bem-estar para animais em situação de risco. Nosso compromisso é 
+          atuar de forma eficiente para que cada pet tenha a segurança e o respeito que merece.
           </p>
           <h3>Integrantes</h3>
           <ul>

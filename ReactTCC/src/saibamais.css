@@ -42,21 +42,23 @@ header {
 
 /* Main Info */
 .info {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 2rem auto;
   padding: 1rem;
   animation: fadeIn 1s ease;
+  background: #ffffff;
+  height: 500px;
 }
 
 .text-info h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #2d6b4b;
 }
 
 .text-info h3 {
   margin-top: 1.5rem;
-  color: #444;
+  color: #2d6b4b;
 }
 
 .text-info p,
@@ -91,7 +93,7 @@ header {
 }
 
 .footer-col h4 {
-  color: #4CAF50;
+  color: #e7d18d;
   margin-bottom: 0.5rem;
 }
 
@@ -128,14 +130,9 @@ header {
   from { opacity: 0; transform: translateY(-30px); }
   to { opacity: 1; transform: translateY(0); }
 }
- /* Botão "INÍCIO" no topo direito */
-.btn-header-top {
-  position: absolute;
-  top: 1.2rem;
-  right: 2rem;
+.descricao {
+  color: #333333; /* coloque aqui a cor que você quiser */
 }
-
-/* Segundo botão (abaixo dos integrantes) */
-.btn-bottom {
-  margin-top: 1.5rem;
+.text-info {
+  color: #333333; /* coloque aqui a cor que você quiser */
 }
