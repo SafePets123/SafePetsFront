@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DenunciasRecebidas from "./DenunciasRecebidas";
+import DenunciasRecebidas from "../components/DenunciasRecebidas";
 import "../dashboard.css";
 import "../style.css";
 

@@ -1,20 +1,19 @@
 import React from 'react';
-import './DenunciaCardAutoridade.css'; // Importa o CSS
+import './DenunciaCardAutoridade.css';
 
-// Interface de dados (adaptada da DenunciaParaCard)
+
 interface DenunciaCardProps {
   denuncia: {
     _id: string;
-    titulo: string; // Ex: Denúncia #9 - Cachorro
+    titulo: string;
     descricao: string;
     status: string;
     dataCriacao: string;
-    local: string; // Campo essencial para a autoridade
+    local: string;
   };
 }
 
 const DenunciaCardAutoridade: React.FC<DenunciaCardProps> = ({ denuncia }) => {
-  // Função auxiliar para formatar a data (se necessário)
   const formatarData = (dataString: string) => {
     try {
       const data = new Date(dataString);
@@ -26,7 +25,7 @@ const DenunciaCardAutoridade: React.FC<DenunciaCardProps> = ({ denuncia }) => {
         minute: '2-digit',
       });
     } catch (e) {
-      return dataString; // Retorna a string original se a formatação falhar
+      return dataString;
     }
   };
 
@@ -53,7 +52,6 @@ const DenunciaCardAutoridade: React.FC<DenunciaCardProps> = ({ denuncia }) => {
         Registrada em: {formatarData(denuncia.dataCriacao)}
       </p>
       
-      {/* Botão de Ação (Opcional, mas útil para a autoridade) */}
       <button className="card-action-btn">Analisar Caso</button>
     </div>
   );

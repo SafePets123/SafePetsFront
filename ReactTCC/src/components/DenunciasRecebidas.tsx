@@ -1,7 +1,4 @@
-// Arquivo: DenunciasRecebidas.tsx
-
 import React, { useEffect, useState } from "react";
-// Importa o novo card para a autoridade
 import DenunciaCardAutoridade from "./DenunciaCardAutoridade"; 
 
 // Interfaces de dados
@@ -11,7 +8,7 @@ interface DenunciaParaCard {
   descricao: string;
   status: string;
   dataCriacao: string;
-  local: string; // Adicionado para o novo card
+  local: string;
 }
 
 interface DenunciaBackend {
@@ -20,7 +17,7 @@ interface DenunciaBackend {
   denun_descricao: string;
   denun_status: string;
   denun_tipo_animal: string;
-  denun_local: string; // Campo do backend
+  denun_local: string;
 }
 
 const DenunciasRecebidas: React.FC = () => {
@@ -38,7 +35,7 @@ const DenunciasRecebidas: React.FC = () => {
           return;
         }
         
-        // URL CORRETA para buscar TODAS as denúncias
+        // URL para buscar denuncias
         const API_URL = "https://safepetsback.onrender.com/denuncias/todas";
         
         const response = await fetch(API_URL, {
@@ -55,14 +52,13 @@ const DenunciasRecebidas: React.FC = () => {
 
         const data: DenunciaBackend[] = await response.json();
         
-        // Mapeamento de Backend para o formato do Card
         const mappedDenuncias: DenunciaParaCard[] = data.map((d) => ({
             _id: d.denun_cod.toString(), 
             titulo: `Denúncia #${d.denun_cod} - ${d.denun_tipo_animal}`, 
             descricao: d.denun_descricao,
             status: d.denun_status || 'Em Análise',
             dataCriacao: d.denun_data, 
-            local: d.denun_local, // Mapeando o local
+            local: d.denun_local,
         }));
 
         setDenuncias(mappedDenuncias);
@@ -95,7 +91,6 @@ const DenunciasRecebidas: React.FC = () => {
       ) : (
         <div className="denuncias-list">
           {denuncias.map((denuncia) => (
-            // Usando o novo card
             <DenunciaCardAutoridade key={denuncia._id} denuncia={denuncia} />
           ))}
         </div>
