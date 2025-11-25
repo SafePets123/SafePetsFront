@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import DenunciasRecebidas from "./DenunciasRecebidas";
 import "../dashboard.css";
 import "../style.css";
 
@@ -16,7 +17,7 @@ const DashboardAutoridade: React.FC = () => {
     const storedEmail = localStorage.getItem("userEmail");
 
     if (storedName && storedEmail) {
-      fetch(`https://safepetsback.onrender.com/orgao/${storedEmail}`)
+      fetch(`https://safepetsback.onrender.com/orgao/${storedEmail}` )
         .then((res) => res.json())
         .then((data) => {
           setUsuario({
@@ -75,15 +76,7 @@ const DashboardAutoridade: React.FC = () => {
           </>
         );
       case "denuncias-recebidas":
-        return <h2>📋 Lista de denúncias recebidas e pendentes.</h2>;
-      case "analisar-casos":
-        return <h2>🔍 Área de análise de casos e relatórios.</h2>;
-      case "comunicar-ong":
-        return <h2>📨 Enviar informações para ONGs parceiras.</h2>;
-      case "perfil":
-        return <h2>👤 Perfil da autoridade.</h2>;
-      case "configuracoes":
-        return <h2>⚙️ Configurações da conta institucional.</h2>;
+        return <DenunciasRecebidas />;
       case "ajuda":
         return (
           <>
@@ -116,10 +109,6 @@ const DashboardAutoridade: React.FC = () => {
             <ul>
               <li onClick={() => setPaginaAtual("inicio")}>🏠 Início</li>
               <li onClick={() => setPaginaAtual("denuncias-recebidas")}>📋 Denúncias Recebidas</li>
-              <li onClick={() => setPaginaAtual("analisar-casos")}>🔍 Analisar Casos</li>
-              <li onClick={() => setPaginaAtual("comunicar-ong")}>📨 Comunicar ONG</li>
-              <li onClick={() => setPaginaAtual("perfil")}>👤 Perfil</li>
-              <li onClick={() => setPaginaAtual("configuracoes")}>⚙️ Configurações</li>
               <li onClick={() => setPaginaAtual("ajuda")}>📞 Ajuda</li>
             </ul>
           </nav>
