@@ -41,7 +41,7 @@ const DenunciasRecebidas: React.FC = () => {
 
     try {
       // ATENÇÃO: Ajuste a URL e a porta conforme a sua configuração de rotas
-      const response = await fetch('http://localhost:3344/denuncias', {
+      const response = await fetch('https://safepetsfront.onrender.com/denuncias', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
