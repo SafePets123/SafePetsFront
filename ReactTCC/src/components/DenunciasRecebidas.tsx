@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import DenunciaCardAutoridade from "./DenunciaCardAutoridade"; 
+import DenunciaCardAutoridade from "../components/DenunciaCardAutoridade"; 
 
 // Interfaces de dados
 interface DenunciaParaCard {
