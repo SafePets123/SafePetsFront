@@ -1,5 +1,3 @@
-// Arquivo: DenunciasRecebidas.tsx
-
 import React, { useEffect, useState } from "react";
 import DenunciaCardAutoridade from "../components/DenunciaCardAutoridade"; 
 
@@ -11,8 +9,8 @@ interface DenunciaParaCard {
   status: string;
   dataCriacao: string;
   local: string; 
-  email: string; // Adicionado
-  telefone: string; // Adicionado
+  // email: string; // Removido
+  telefone: string; // Mantido
 }
 
 interface DenunciaBackend {
@@ -22,8 +20,8 @@ interface DenunciaBackend {
   denun_status: string;
   denun_tipo_animal: string;
   denun_local: string; 
-  denun_email: string; // Assumindo que o backend retorna o email
-  denun_telefone: string; // Assumindo que o backend retorna o telefone
+  denun_email: string; // Removido do mapeamento, mas mantido na interface caso o backend ainda envie
+  denun_telefone: string; // Mantido
 }
 
 const DenunciasRecebidas: React.FC = () => {
@@ -65,8 +63,9 @@ const DenunciasRecebidas: React.FC = () => {
             status: d.denun_status || 'Em Análise',
             dataCriacao: d.denun_data, 
             local: d.denun_local, 
-            email: d.denun_email, // Mapeando o email
-            telefone: d.denun_telefone, // Mapeando o telefone
+            // email: d.denun_email || '', // Mapeamento do email removido
+            // Garante que o telefone seja uma string, tratando null/undefined
+            telefone: d.denun_telefone || '', 
         }));
 
         setDenuncias(mappedDenuncias);
