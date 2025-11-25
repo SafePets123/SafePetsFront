@@ -37,7 +37,7 @@ const MinhasDenuncias: React.FC = () => {
           return;
         }
         
-        const response = await fetch("https://safepetsfront.onrender.com/denuncias/minhas", {
+        const response = await fetch("https://safepetsback.onrender.com/denuncias/minhas", {
           headers: {
             "Authorization": `Bearer ${token}`,
             "Content-Type": "application/json",
