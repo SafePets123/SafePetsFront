@@ -1,5 +1,5 @@
 import React from 'react';
-import './DenunciaCardAutoridade.css';
+import '../DenunciaCardAutoridade.css';
 
 
 interface DenunciaCardProps {
