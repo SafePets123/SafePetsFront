@@ -16,7 +16,7 @@ const DashboardOng: React.FC = () => {
     const storedEmail = localStorage.getItem("userEmail");
 
     if (storedName && storedEmail) {
-      fetch(`http://localhost:3344/ong/${storedEmail}`)
+      fetch(`https://safepetsback.onrender.com/ong/${storedEmail}`)
         .then((res) => res.json())
         .then((data) => {
           setUsuario({

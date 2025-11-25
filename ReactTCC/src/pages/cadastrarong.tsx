@@ -25,7 +25,7 @@ const CadastrarOng: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3344/ong/cadastro", {
+      const response = await fetch("https://safepetsback.onrender.com/ong/cadastro", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

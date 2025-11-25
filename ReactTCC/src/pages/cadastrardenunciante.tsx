@@ -27,7 +27,7 @@ const CadastrarDenunciante: React.FC = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:3344/user", {
+      const response = await fetch("https://safepetsback.onrender.com/user", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bodyData ),
