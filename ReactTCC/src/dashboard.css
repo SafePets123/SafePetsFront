@@ -201,6 +201,9 @@
   .info .container {
     flex-direction: column;
   }
+  .dash-container{
+    width: 100%;
+  }
 
   .text-info, .image-box {
     flex: 1 1 100%;
