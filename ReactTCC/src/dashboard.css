@@ -208,8 +208,7 @@
   .dash-sidebar{
     position: absolute;
     width: 100%;
-    height: 100%;
-    bottom: 0;
+    transform: translateY(796px)
   }
   .text-info, .image-box {
     flex: 1 1 100%;
