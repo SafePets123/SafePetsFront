@@ -193,6 +193,7 @@ a:hover {
 .info {
   background-color: #2d6b4b;
   color: white;
+  height: 900px;
   padding: 0;
 }
 
@@ -262,7 +263,7 @@ a:hover {
   color: white;
   padding: 40px 20px 10px;
   font-size: 14px;
-  transform: translateY(400px);
+  transform: translateY(280px);
 }
 
 .footer-container {
