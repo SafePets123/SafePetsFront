@@ -317,6 +317,8 @@ a:hover {
   .text-info, .image-box {
     flex: 1 1 100%;
     height: auto;
+    margin: 0;
+    padding: 0;
   }
 
   .slide .overlay p {
