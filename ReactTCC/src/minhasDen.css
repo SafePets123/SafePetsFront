@@ -91,3 +91,35 @@
   border-radius: 8px;
   color: #888;
 }
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .info .container {
+    flex-direction: column;
+  }
+
+  .text-info, .image-box {
+    flex: 1 1 100%;
+    height: auto;
+  }
+
+  .slide .overlay p {
+    font-size: 18px;
+  }
+
+  .menu .container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .header .container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
