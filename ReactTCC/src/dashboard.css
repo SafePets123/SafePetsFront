@@ -206,9 +206,9 @@
     display: initial;
   }
   .dash-sidebar{
-    position: fixed;
+    position: absolute;
     width: 100%;
-    bottom: 0;
+    transform: translateY(-100px);
   }
 
   .text-info, .image-box {
