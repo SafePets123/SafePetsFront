@@ -209,7 +209,7 @@
   .dash-sidebar{
     position: absolute;
     width: 100%;
-    transform: translateY(796px)
+    transform: translateY(880px)
   }
   #sidebar-scrollbar{
     overflow-y: visible;
