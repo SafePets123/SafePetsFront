@@ -97,13 +97,12 @@ function App() {
           <div className="footer-col">
             <h4>Contato</h4>
             <p>Email: safepets@exemplo.com</p>
-            <p>WhatsApp: (00) 91234-5678</p>
+            <p>WhatsApp: (24) 99981-0631</p>
           </div>
           <div className="footer-col">
             <h4>Redes Sociais</h4>
-            <p>Instagram: @safepets</p>
-            <p>Twitter: /safepets</p>
-            <p>TikTok: @safepets</p>
+            <p>Instagram: @safe_pets2025</p>
+            <p>Facebook: facebook.com/share/1Bb2CDEftV/</p>
           </div>
         </div>
         <div className="footer-line">

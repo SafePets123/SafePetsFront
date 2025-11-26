@@ -41,7 +41,7 @@ header {
 
 
 /* Main Info */
-.info {
+.saiba {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 1rem;
@@ -49,24 +49,31 @@ header {
   background: #ffffff;
   height: 500px;
 }
-
-.text-info h2 {
+.info {
+  max-width:800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  animation: fadeIn 1s ease;
+  background: #2d6b4b;;
+  height: 250px;
+}
+.text-info2 h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
   color: #2d6b4b;
 }
 
-.text-info h3 {
+.text-info2 h3 {
   margin-top: 1.5rem;
   color: #2d6b4b;
 }
 
-.text-info p,
-.text-info ul {
+.text-info2 p,
+.text-info2 ul {
   margin-top: 0.5rem;
 }
 
-.text-info ul {
+.text-info2 ul {
   list-style-type: disc;
   padding-left: 1.5rem;
 }
@@ -130,9 +137,6 @@ header {
   from { opacity: 0; transform: translateY(-30px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.descricao {
-  color: #333333; /* coloque aqui a cor que você quiser */
-}
-.text-info {
+.text-info2 {
   color: #333333; /* coloque aqui a cor que você quiser */
 }
