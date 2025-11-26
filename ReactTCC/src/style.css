@@ -263,7 +263,6 @@ a:hover {
   color: white;
   padding: 40px 20px 10px;
   font-size: 14px;
-  transform: translateY(280px);
 }
 
 .footer-container {
@@ -317,6 +316,11 @@ a:hover {
     margin: 0;
     padding: 0;
   }
+  .info{
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
 
   .text-info, .image-box {
     flex: 1 1 100%;
@@ -327,6 +331,9 @@ a:hover {
 
   .slide .overlay p {
     font-size: 18px;
+  }
+  .footer{
+    transform: translateY(240px);
   }
 
   .menu .container {
