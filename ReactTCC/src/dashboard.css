@@ -211,6 +211,10 @@
     width: 100%;
     transform: translateY(796px)
   }
+  #sidebar-scrollbar{
+    overflow-y: scroll;
+  }
+
   .text-info, .image-box {
     flex: 1 1 100%;
     height: auto;

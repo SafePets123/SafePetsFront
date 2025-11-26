@@ -56,7 +56,7 @@ const DashboardDenunciante: React.FC = () => {
 
       <div className="dash-container">
         <aside className="dash-sidebar">
-          <nav>
+          <nav id="sidebar-scroll">
             <ul>
               <li onClick={() => setPaginaAtual("inicio")}>🏠 Início</li>
               <li onClick={() => setPaginaAtual("minhas-denuncias")}>📋 Minhas Denúncias</li>

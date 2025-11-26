@@ -138,7 +138,6 @@ const Denuncie: React.FC<DenuncieProps> = ({ embed = false }) => {
 
               <label htmlFor="animal">Tipo de Animal:</label>
               <select id="animal" name="animal" value={animal} onChange={handleAnimalChange} required>
-                <option value="">Selecione</option>
                 <option value="Cachorro">Cachorro</option>
                 <option value="Gato">Gato</option>
                 <option value="Outro">Outro</option>
