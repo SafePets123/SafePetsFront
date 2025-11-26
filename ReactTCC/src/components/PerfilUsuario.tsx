@@ -1,7 +1,7 @@
 // Arquivo: PerfilUsuario.tsx (Localizado em src/components/ ou src/pages/ dependendo da sua estrutura)
 
 import React, { useState, useEffect } from 'react';
-import './PerfilUsuario.css'; // Importa o CSS
+import '../PerfilUsuario.css'; // Importa o CSS
 
 interface Usuario {
     nome: string;
