@@ -203,6 +203,7 @@
   }
   .dash-container{
     width: 100%;
+    display: initial;
   }
 
   .text-info, .image-box {
