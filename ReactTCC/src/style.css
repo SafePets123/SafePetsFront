@@ -316,6 +316,9 @@ a:hover {
     margin: 0;
     padding: 0;
   }
+  .divisor-clean{
+    display: none;
+  }
   .info{
     height: auto;
     margin: 0;
