@@ -310,7 +310,7 @@ a:hover {
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .info .container {
+  .info, .container {
     flex-direction: column;
     margin-bottom: 100px;
   }
