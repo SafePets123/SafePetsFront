@@ -1,13 +1,18 @@
+// Arquivo: DashboardDenunciante.tsx (Substitua o conteúdo completo)
+
 import React, { useState, useEffect } from "react";
 import "../dashboard.css";
 import "../style.css";
 
-// Importa o componente inicial corrigido
+// Importa os componentes existentes
 import Inicio from "../components/Inicio"; 
 import Ajuda from "../components/Ajuda";
 import MinhasDenuncias from "../components/MinhasDenuncias";
 import Denuncie from "../pages/denuncie";
 import { useNavigate } from "react-router-dom";
+
+// NOVO: Importa o componente de Perfil
+import PerfilUsuario from "../components/PerfilUsuario"; 
 
 const DashboardDenunciante: React.FC = () => {
   const navigate = useNavigate();
@@ -18,6 +23,11 @@ const DashboardDenunciante: React.FC = () => {
     const nome = localStorage.getItem("userName") || "Usuário";
     const email = localStorage.getItem("userEmail") || "email@exemplo.com";
     setUsuario({ nome, email });
+    
+    // NOTA: Se você quiser buscar dados mais completos do usuário,
+    // você pode usar a rota /userauth/:email aqui, como no código anterior.
+    // Ex: fetch(`https://safepetsback.onrender.com/userauth/${email}` )
+    
   }, []);
 
   const handleLogout = () => {
@@ -30,6 +40,7 @@ const DashboardDenunciante: React.FC = () => {
       case "inicio": return <Inicio setPaginaAtual={setPaginaAtual} />;
       case "minhas-denuncias": return <MinhasDenuncias />;
       case "nova-denuncia": return <Denuncie />;
+      case "perfil": return <PerfilUsuario />; // NOVO: Renderiza o PerfilUsuario
       case "ajuda": return <Ajuda />;
       default: return <Inicio setPaginaAtual={setPaginaAtual} />;
     }
@@ -50,6 +61,7 @@ const DashboardDenunciante: React.FC = () => {
               <li onClick={() => setPaginaAtual("inicio")}>🏠 Início</li>
               <li onClick={() => setPaginaAtual("minhas-denuncias")}>📋 Minhas Denúncias</li>
               <li onClick={() => setPaginaAtual("nova-denuncia")}>➕ Nova Denúncia</li>
+              <li onClick={() => setPaginaAtual("perfil")}>👤 Perfil</li> {/* NOVO: Opção de Perfil */}
               <li onClick={() => setPaginaAtual("ajuda")}>📞 Ajuda</li>
             </ul>
           </nav>

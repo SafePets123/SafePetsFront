@@ -8,8 +8,8 @@ const Ajuda: React.FC = () => {
       
       <h2>Contato</h2>
       <ul>
-        <li>Email: suporte@safepets.com</li>
-        <li>Telefone: (XX) XXXX-XXXX</li>
+        <li>Email: safepets38@gmail.com</li>
+        <li>Telefone: (24) 99981-0631</li>
       </ul>
     </div>
   );

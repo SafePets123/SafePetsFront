@@ -1,113 +1,133 @@
+/* Arquivo: PerfilUsuario.css */
+
 .perfil-usuario-container {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .perfil-usuario-container h2 {
-  color: #333;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 10px;
+    color: #1e8449; /* Cor principal do SafePets */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.profile-display p {
-  margin-bottom: 10px;
-  font-size: 1.1em;
+.perfil-form .form-group {
+    margin-bottom: 15px;
 }
 
-.profile-display strong {
-  color: #555;
+.perfil-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
 }
 
-.profile-display button {
-  background-color: #28a745;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  margin-top: 15px;
+.perfil-form input[type="text"],
+.perfil-form input[type="email"],
+.perfil-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
 }
 
-.profile-display button:hover {
-  background-color: #218838;
+.perfil-form input:disabled {
+    background-color: #f5f5f5;
+    color: #777;
 }
 
-.profile-edit-form .form-group {
-  margin-bottom: 15px;
+.update-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e8449; /* Verde principal */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
-.profile-edit-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #555;
+.update-btn:hover:not(:disabled) {
+    background-color: #155724;
 }
 
-.profile-edit-form input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+.update-btn:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
 }
 
-.profile-edit-form button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  margin-right: 10px;
+/* Seção de Deletar Conta */
+.delete-section {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #f8d7da;
+    background-color: #f8d7da; /* Vermelho claro */
+    border-radius: 4px;
+    text-align: center;
 }
 
-.profile-edit-form button[type="button"] {
-  background-color: #6c757d;
+.delete-section h3 {
+    color: #721c24; /* Vermelho escuro */
+    margin-top: 0;
 }
 
-.profile-edit-form button:hover {
-  opacity: 0.9;
+.delete-section p {
+    color: #721c24;
+    margin-bottom: 15px;
 }
 
-.form-message {
-  margin-top: 15px;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
+.delete-btn {
+    padding: 10px 20px;
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.profile-avatar {
-  margin-bottom: 20px;
-  text-align: center;
+.delete-btn:hover:not(:disabled) {
+    background-color: #c82333;
 }
 
-.user-avatar-lg {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #ddd;
+.delete-btn:disabled {
+    background-color: #f5c6cb;
+    cursor: not-allowed;
 }
 
-.user-avatar-fallback-lg {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #a8e6cf; /* Cor de fundo suave */
-  color: #333; /* Cor do texto */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3em;
-  font-weight: bold;
-  margin: 0 auto;
-  border: 2px solid #ddd;
+/* Mensagens de Status */
+.message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 20px;
+    color: #1e8449;
+    font-size: 1.2em;
+}
