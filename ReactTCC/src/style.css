@@ -312,6 +312,7 @@ a:hover {
 @media (max-width: 768px) {
   .info .container {
     flex-direction: column;
+    margin-bottom: 100px;
   }
 
   .text-info, .image-box {
