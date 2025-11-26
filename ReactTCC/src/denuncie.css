@@ -204,6 +204,9 @@ footer {
   .hero h2 {
     font-size: 26px;
   }
+  #bagre{
+    transform: translateY(-100px);
+  }
 
   .hero p {
     font-size: 16px;

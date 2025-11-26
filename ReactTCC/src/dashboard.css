@@ -209,10 +209,8 @@
   .dash-sidebar{
     position: absolute;
     width: 100%;
-    transform: translateY(880px)
-  }
-  #sidebar-scrollbar{
-    overflow-y: visible;
+    transform: translateY(940px);
+    margin-top: auto;
   }
 
   .text-info, .image-box {
