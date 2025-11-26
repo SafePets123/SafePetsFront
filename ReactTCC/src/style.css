@@ -193,7 +193,7 @@ a:hover {
 .info {
   background-color: #2d6b4b;
   color: white;
-  padding: 40px 20px;
+  padding: 0;
 }
 
 .info .container {
@@ -262,6 +262,7 @@ a:hover {
   color: white;
   padding: 40px 20px 10px;
   font-size: 14px;
+  transform: translateY(400px);
 }
 
 .footer-container {
@@ -310,9 +311,10 @@ a:hover {
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .info, .container {
+  .info .container {
     flex-direction: column;
-    margin-bottom: 100px;
+    margin: 0;
+    padding: 0;
   }
 
   .text-info, .image-box {
