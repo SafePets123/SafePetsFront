@@ -61,7 +61,7 @@ const DashboardDenunciante: React.FC = () => {
               <li onClick={() => setPaginaAtual("inicio")}>🏠 Início</li>
               <li onClick={() => setPaginaAtual("minhas-denuncias")}>📋 Minhas Denúncias</li>
               <li onClick={() => setPaginaAtual("nova-denuncia")}>➕ Nova Denúncia</li>
-              <li onClick={() => setPaginaAtual("perfil")}>👤 Perfil</li> {/* NOVO: Opção de Perfil */}
+              <li onClick={() => setPaginaAtual("perfil")}>👤 Perfil</li>
               <li onClick={() => setPaginaAtual("ajuda")}>📞 Ajuda</li>
             </ul>
           </nav>
