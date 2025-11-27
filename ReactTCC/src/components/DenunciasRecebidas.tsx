@@ -9,8 +9,7 @@ interface DenunciaParaCard {
   status: string;
   dataCriacao: string;
   local: string; 
-  // email: string; // Removido
-  telefone: string; // Mantido
+  telefone: string;
 }
 
 interface DenunciaBackend {
@@ -20,8 +19,8 @@ interface DenunciaBackend {
   denun_status: string;
   denun_tipo_animal: string;
   denun_local: string; 
-  denun_email: string; // Removido do mapeamento, mas mantido na interface caso o backend ainda envie
-  denun_telefone: string; // Mantido
+  denun_email: string;
+  denun_telefone: string;
 }
 
 const DenunciasRecebidas: React.FC = () => {
@@ -63,8 +62,6 @@ const DenunciasRecebidas: React.FC = () => {
             status: d.denun_status || 'Em Análise',
             dataCriacao: d.denun_data, 
             local: d.denun_local, 
-            // email: d.denun_email || '', // Mapeamento do email removido
-            // Garante que o telefone seja uma string, tratando null/undefined
             telefone: d.denun_telefone || '', 
         }));
 

@@ -55,7 +55,6 @@ const CadastrarOrgao: React.FC = () => {
     }
 
     try {
-      // VERIFIQUE A PORTA CORRETA DO SEU BACKEND (EX: 3333 OU 3000)
       const response = await fetch("https://safepetsback.onrender.com/orgao/cadastro", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -65,7 +64,6 @@ const CadastrarOrgao: React.FC = () => {
           password: formData.password,
           telefone: formData.telefone.replace(/\D/g, '' ), 
           tipo_orgao: formData.tipo_orgao === "Outro" ? formData.outro_tipo_orgao : formData.tipo_orgao,
-          // CORREÇÃO: Limpeza do campo antes de enviar
           num_identificacao_funcional: formData.num_identificacao_funcional.replace(/\D/g, ''),
           cidade_atuacao: formData.cidade_atuacao,
           estado: formData.estado,

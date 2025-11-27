@@ -1,5 +1,3 @@
-// Arquivo: DashboardDenunciante.tsx (Substitua o conteúdo completo)
-
 import React, { useState, useEffect } from "react";
 import "../dashboard.css";
 import "../style.css";
@@ -10,8 +8,6 @@ import Ajuda from "../components/Ajuda";
 import MinhasDenuncias from "../components/MinhasDenuncias";
 import Denuncie from "../pages/denuncie";
 import { useNavigate } from "react-router-dom";
-
-// NOVO: Importa o componente de Perfil
 import PerfilUsuario from "../components/PerfilUsuario"; 
 
 const DashboardDenunciante: React.FC = () => {
@@ -23,11 +19,7 @@ const DashboardDenunciante: React.FC = () => {
     const nome = localStorage.getItem("userName") || "Usuário";
     const email = localStorage.getItem("userEmail") || "email@exemplo.com";
     setUsuario({ nome, email });
-    
-    // NOTA: Se você quiser buscar dados mais completos do usuário,
-    // você pode usar a rota /userauth/:email aqui, como no código anterior.
-    // Ex: fetch(`https://safepetsback.onrender.com/userauth/${email}` )
-    
+
   }, []);
 
   const handleLogout = () => {
@@ -40,7 +32,7 @@ const DashboardDenunciante: React.FC = () => {
       case "inicio": return <Inicio setPaginaAtual={setPaginaAtual} />;
       case "minhas-denuncias": return <MinhasDenuncias />;
       case "nova-denuncia": return <Denuncie />;
-      case "perfil": return <PerfilUsuario />; // NOVO: Renderiza o PerfilUsuario
+      case "perfil": return <PerfilUsuario />;
       case "ajuda": return <Ajuda />;
       default: return <Inicio setPaginaAtual={setPaginaAtual} />;
     }

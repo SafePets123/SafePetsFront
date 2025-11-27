@@ -9,7 +9,6 @@ interface DenunciaCardProps {
     status: string;
     dataCriacao: string;
     local: string; 
-    // email: string; // Removido
     telefone: string;
   };
 }
@@ -29,11 +28,6 @@ const DenunciaCardAutoridade: React.FC<DenunciaCardProps> = ({ denuncia }) => {
       return dataString;
     }
   };
-
-  // Função auxiliar para verificar se a string é vazia ou nula/undefined (mantida para o telefone, se necessário)
-  // const isFalsyOrEmpty = (value: string | null | undefined) => {
-  //   return !value || value.trim() === '';
-  // };
 
   return (
     <div className="denuncia-card-autoridade">

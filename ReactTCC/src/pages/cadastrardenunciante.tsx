@@ -1,5 +1,3 @@
-// Conteúdo do arquivo CadastrarDenunciante.tsx (pasted_content_3.txt)
-
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../Cad.css";
@@ -37,39 +35,27 @@ const CadastrarDenunciante: React.FC = () => {
 
       if (response.ok) {
         alert("✅ Cadastro realizado com sucesso! Redirecionando para o painel.");
-
-        // --- INÍCIO DA CORREÇÃO ROBUSTA ---
-        // Garante que o token e o ID sejam salvos para autenticação imediata
-
-        // 1. Salva o token de autenticação
+        // Salva o token de autenticação
         if (data.token) {
           localStorage.setItem("token", data.token);
         } else {
-          // Se o backend não retornou o token, algo está errado no backend.
-          // Isso deve ser corrigido, mas o front continua para o dashboard.
           console.error("Backend não retornou o token após o cadastro.");
         }
-
-        // 2. Salva o tipo de usuário
+        // Salva o tipo de usuário
         localStorage.setItem("userType", "denunciante");
 
-        // 3. Salva o ID do usuário (essencial para funcionalidades)
-        // O backend retorna o ID dentro de data.denunciante.id
+        // Salva o ID do usuário (essencial para funcionalidades)
         const userId = data.denunciante?.id; 
         if (userId) {
           localStorage.setItem("userId", userId.toString());
-        } else {
+        } else{
           console.error("Backend não retornou o ID do usuário após o cadastro.");
         }
-
-        // 4. Salva o nome e o email para exibição
+        // Salva o nome e o email para exibição
         localStorage.setItem("userName", bodyData.nome);
         localStorage.setItem("userEmail", bodyData.email);
-
-        // --- FIM DA CORREÇÃO ROBUSTA ---
-
         navigate("/dashboardDenunciante");
-      } else {
+      } else{
         alert("❌ Erro ao cadastrar: " + (data.erro || "Erro desconhecido"));
       }
     } catch (err) {

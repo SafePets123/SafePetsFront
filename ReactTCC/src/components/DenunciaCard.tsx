@@ -1,5 +1,5 @@
 import React from 'react';
-import '../DenunciaCard.css'; // Estilo para o cartão da denúncia
+import '../DenunciaCard.css';
 
 interface DenunciaCardProps {
   denuncia: {
@@ -23,7 +23,6 @@ const DenunciaCard: React.FC<DenunciaCardProps> = ({ denuncia }) => {
       <p><strong>Descrição:</strong> {denuncia.descricao}</p>
       <p><strong>Status:</strong> <span className={`status-${denuncia.status.toLowerCase().replace(/ /g, '-')}`}>{denuncia.status}</span></p>
       <p><strong>Data de Criação:</strong> {formatDate(denuncia.dataCriacao)}</p>
-      {/* Adicionar mais detalhes ou ações se necessário */}
     </div>
   );
 };

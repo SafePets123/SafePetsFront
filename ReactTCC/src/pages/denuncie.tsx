@@ -4,12 +4,10 @@ import "../denuncie.css";
 import "../style.css";
 
 interface DenuncieProps {
-  embed?: boolean; // ← se true, não mostra header/footer
+  embed?: boolean;
 }
 
 const Denuncie: React.FC<DenuncieProps> = ({ embed = false }) => {
-  // O ID do usuário não é mais um estado, mas sim lido do LocalStorage
-  // const [idUser, setID] = useState<string>(""); 
   const [nome, setNome] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [telefone, setTelefone] = useState<string>("");
@@ -19,16 +17,12 @@ const Denuncie: React.FC<DenuncieProps> = ({ embed = false }) => {
   const [midia, setMidia] = useState<FileList | null>(null);
   const [mensagem, setMensagem] = useState<{ text: string; type: "ok" | "err" | "" }>({ text: "", type: "" });
 
-  // ----------------------------------------------------------------
-  // CORREÇÃO 1: Preencher nome e email automaticamente se logado
-  // ----------------------------------------------------------------
   useEffect(() => {
     const storedName = localStorage.getItem("userName");
     const storedEmail = localStorage.getItem("userEmail");
     if (storedName) setNome(storedName);
     if (storedEmail) setEmail(storedEmail);
   }, []);
-  // ----------------------------------------------------------------
 
   const formatarTelefone = (valor: string): string => {
     let apenasNumeros = valor.replace(/\D/g, "");
@@ -43,15 +37,20 @@ const Denuncie: React.FC<DenuncieProps> = ({ embed = false }) => {
     return "";
   };
 
-
-  // const handleIDChange = (e: React.ChangeEvent<HTMLInputElement>) => setID(e.target.value); // Removido
-  const handleNomeChange = (e: React.ChangeEvent<HTMLInputElement>) => setNome(e.target.value);
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
-  const handleTelefoneChange = (e: React.ChangeEvent<HTMLInputElement>) => setTelefone(formatarTelefone(e.target.value));
-  const handleEnderecoChange = (e: React.ChangeEvent<HTMLInputElement>) => setEndereco(e.target.value);
-  const handleAnimalChange = (e: React.ChangeEvent<HTMLSelectElement>) => setAnimal(e.target.value);
-  const handleDescricaoChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => setDescricao(e.target.value);
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => setMidia(e.target.files);
+  const handleNomeChange = (e:
+    React.ChangeEvent<HTMLInputElement>) => setNome(e.target.value);
+  const handleEmailChange = (e:
+    React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value);
+  const handleTelefoneChange = (e:
+    React.ChangeEvent<HTMLInputElement>) => setTelefone(formatarTelefone(e.target.value));
+  const handleEnderecoChange = (e:
+    React.ChangeEvent<HTMLInputElement>) => setEndereco(e.target.value);
+  const handleAnimalChange = (e:
+    React.ChangeEvent<HTMLSelectElement>) => setAnimal(e.target.value);
+  const handleDescricaoChange = (e:
+    React.ChangeEvent<HTMLTextAreaElement>) => setDescricao(e.target.value);
+  const handleFileChange = (e:
+    React.ChangeEvent<HTMLInputElement>) => setMidia(e.target.files);
 
   const resetForm = () => {
     // Não reseta nome e email se estiverem preenchidos automaticamente
@@ -74,16 +73,8 @@ const Denuncie: React.FC<DenuncieProps> = ({ embed = false }) => {
       setMensagem({ text: "Você precisa estar logado para fazer uma denúncia.", type: "err" });
       return;
     }
-
-    // Para simplificar o upload de mídia, vamos enviar apenas o nome do arquivo ou uma URL temporária.
     const midiaUrl = midia && midia.length > 0 ? midia[0].name : null; 
-    
-    // ----------------------------------------------------------------
-    // CORREÇÃO 2: Ajustar o payload para o formato esperado pelo backend
-    // O backend espera: denun_local, denun_hora, denun_data, dep_cod, etc.
-    // ----------------------------------------------------------------
     const payload = {
-        // Campos que você tinha no frontend, mapeados para o backend
         denun_local: endereco, // Mapeando 'endereco' para 'denun_local' (ajuste se necessário)
         denun_hora: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', second: '2-digit' }),
         denun_data: new Date().toISOString().split('T')[0], // Formato YYYY-MM-DD
@@ -115,7 +106,7 @@ const Denuncie: React.FC<DenuncieProps> = ({ embed = false }) => {
     <div className={`page-root ${embed ? "embed" : ""}`}>
      
 
-      <main>
+      <main id='bagre'>
         <section className="form-section">
           <div className="form-container">
             <h2>Formulário de Denúncia</h2>
